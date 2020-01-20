@@ -838,11 +838,114 @@ html, body {
 </style>
 
 
+<!--mainChart position-->
 <style>
-  .relative1 {
+  .relativeMain {
     position: relative;
     top: -70px
   }
+</style>
+
+<!--progressBar position-->
+<style>
+  #progAll {
+    position: relative;
+    top: -22px
+  }
+</style>
+<style>
+  .relativeProg {
+    position: relative;
+    top: -22px; 
+    left: 80px;
+  }
+</style>
+
+
+<!--for div (table) overflow-->
+<style>
+  div.fixHei {
+    overflow: auto;
+    height: 150px
+  }
+</style>
+
+<!--for table_grade1-->
+<style>
+  #grade11 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%
+  }
+
+  #grade11 td,  #grade11 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #grade11 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #965454;
+    color: white;
+  }
+
+  #grade11 tr:nth-child(even){background-color: #f2f2f2;}
+
+  #grade11 tr:hover {background-color: #ddd;}
+</style>
+
+<!--for table_grade2-->
+<style>
+  #grade22 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%
+  }
+
+  #grade22 td,  #grade22 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #grade22 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #96a48b;
+    color: white;
+  }
+
+  #grade22 tr:nth-child(even){background-color: #f2f2f2;}
+
+  #grade22 tr:hover {background-color: #ddd;}
+</style>
+
+<!--for table_grade3-->
+<style>
+  #grade33 {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%
+  }
+
+  #grade33 td,  #grade33 th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #grade33 th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #c5b8a5;
+    color: white;
+  }
+
+  #grade33 tr:nth-child(even){background-color: #f2f2f2;}
+
+  #grade33 tr:hover {background-color: #ddd;}
 </style>
 
 
@@ -2650,7 +2753,7 @@ window.FlexDashboardComponents.push({
 <div class="knitr-options" data-fig-width="576" data-fig-height="460">
 
 </div>
-<div id="inputs" class="section level2 sidebar">
+<div id="inputs" class="section level2 sidebar" data-width="200">
 <h2>Inputs</h2>
 <div id="hw999_sb" height="100%">
 
@@ -2662,32 +2765,446 @@ window.FlexDashboardComponents.push({
   var pymParent = new pym.Parent("hw999_sb", "sidebar/hw999_sidebar.html", {});
 </script>
 </div>
-<div id="column" class="section level2" data-width="600">
+<div id="column" class="section level2" data-width="500">
 <h2>Column</h2>
-<div id="總學分" class="section level3">
-<h3>總學分</h3>
-<object id="progAll" data="svg/progressAll.svg" type="image/svg+xml" width="90%" style="display: block">
+<div id="總覽" class="section level3">
+<h3>總覽</h3>
+<object id="progAll" data="svg/progressAll.svg" type="image/svg+xml" width="100%" style="display: block">
 </object>
-<object id="mainChart" data="svg/mainChart.svg" type="image/svg+xml" width="100%" class="relative1" style="display: none">
+<object id="mainChart" data="svg/mainChart.svg" type="image/svg+xml" width="100%" class="relativeMain" style="display: none">
 </object>
 </div>
 </div>
-<div id="column-1" class="section level2" data-width="250">
+<div id="column-1" class="section level2" data-width="300">
 <h2>Column</h2>
-<div id="必修學分" class="section level3">
-<h3>必修學分</h3>
-<object id="prog1" data="svg/progress1.svg" type="image/svg+xml" width="60%" style="display: block">
+<div id="必修" class="section level3">
+<h3>必修</h3>
+<object id="prog1" data="svg/progress1.svg" type="image/svg+xml" width="55%" class="relativeProg" style="display: block">
 </object>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
 </div>
-<div id="選修學分" class="section level3">
-<h3>選修學分</h3>
-<object id="prog2" data="svg/progress2.svg" type="image/svg+xml" width="60%" style="display: block">
-</object>
+<div id="grade1" class="fixHei" style="display: none">
+  <table id="grade11">
+    <tr>
+      <th>名稱</th>
+      <th>學期</th>
+      <th>學分</th>
+      <th>成績</th>
+    </tr>
+    <tr>
+      <td>經濟學原理</td>
+      <td>一上</td>
+      <td>4</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>微積分</td>
+      <td>一上</td>
+      <td>3</td>
+      <td>*58 (62)</td>
+    </tr>
+    <tr>
+      <td>會計學</td>
+      <td>一上</td>
+      <td>3</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>國文：經典閱讀與詮釋</td>
+      <td>一上</td>
+      <td>3</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td>歷史</td>
+      <td>一上</td>
+      <td>2</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>英文</td>
+      <td>一上</td>
+      <td>2</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>英語聽講練習</td>
+      <td>一上</td>
+      <td>1</td>
+      <td>61</td>
+    </tr>
+    <tr>
+      <td>體育：桌球</td>
+      <td>一上</td>
+      <td>0</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>女生軍訓１</td>
+      <td>一上</td>
+      <td>0</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <td>經濟學原理</td>
+      <td>一下</td>
+      <td>4</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>微積分</td>
+      <td>一下</td>
+      <td>3</td>
+      <td>63</td>
+    </tr>
+    <tr>
+      <td>會計學</td>
+      <td>一下</td>
+      <td>3</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>國文：經典閱讀與詮釋</td>
+      <td>一下</td>
+      <td>3</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>歷史</td>
+      <td>一下</td>
+      <td>2</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>英文</td>
+      <td>一下</td>
+      <td>2</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>英語聽講練習</td>
+      <td>一下</td>
+      <td>1</td>
+      <td>66</td>
+    </tr>
+    <tr>
+      <td>體育：桌球</td>
+      <td>一下</td>
+      <td>0</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>女生軍訓２</td>
+      <td>一下</td>
+      <td>0</td>
+      <td>85</td>
+    </tr>
+    <tr>
+      <td>個體經濟學</td>
+      <td>二上</td>
+      <td>3</td>
+      <td>70</td>
+    </tr>
+    <tr>
+      <td>總體經濟學</td>
+      <td>二上</td>
+      <td>3</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>統計學</td>
+      <td>二上</td>
+      <td>3</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <td>體育：桌球</td>
+      <td>二上</td>
+      <td>0</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td>個體經濟學</td>
+      <td>二下</td>
+      <td>3</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>總體經濟學</td>
+      <td>二下</td>
+      <td>3</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>統計學</td>
+      <td>二下</td>
+      <td>3</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>體育：桌球</td>
+      <td>二下</td>
+      <td>0</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>公共經濟學</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>國際經濟學</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>貨幣銀行學</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>經濟思想史</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>公共經濟學</td>
+      <td>三下</td>
+      <td>2</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>國際經濟學</td>
+      <td>三下</td>
+      <td>2</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>貨幣銀行學</td>
+      <td>三下</td>
+      <td>2</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <td>經濟思想史</td>
+      <td>三下</td>
+      <td>2</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>商事法</td>
+      <td>四上</td>
+      <td>3</td>
+      <td>81</td>
+    </tr>
+  </table>
 </div>
-<div id="通識學分" class="section level3">
-<h3>通識學分</h3>
-<object id="prog3" data="svg/progress3.svg" type="image/svg+xml" width="60%" style="display: block">
+
+</div>
+<div id="選修" class="section level3">
+<h3>選修</h3>
+<object id="prog2" data="svg/progress2.svg" type="image/svg+xml" width="55%" class="relativeProg" style="display: block">
 </object>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="grade2" class="fixHei" style="display: none">
+  <table id="grade22">
+    <tr>
+      <th>名稱</th>
+      <th>學期</th>
+      <th>學分</th>
+      <th>成績</th>
+    </tr>
+    <tr>
+      <td>企業管理</td>
+      <td>一上</td>
+      <td>2</td>
+      <td>79</td>
+    </tr>
+    <tr>
+      <td>企業管理</td>
+      <td>一下</td>
+      <td>2</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>社會學</td>
+      <td>一下</td>
+      <td>3</td>
+      <td>88</td>
+    </tr>
+    <tr>
+      <td>中級會計學</td>
+      <td>二上</td>
+      <td>3</td>
+      <td>69</td>
+    </tr>
+    <tr>
+      <td>俄語（１）</td>
+      <td>二上</td>
+      <td>2</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>民法概要</td>
+      <td>二上</td>
+      <td>2</td>
+      <td>68</td>
+    </tr>
+    <tr>
+      <td>初級日文(一)</td>
+      <td>二下</td>
+      <td>2</td>
+      <td>95</td>
+    </tr>
+    <tr>
+      <td>中級會計學</td>
+      <td>二下</td>
+      <td>3</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <td>民法概要</td>
+      <td>二下</td>
+      <td>2</td>
+      <td>90</td>
+    </tr>
+    <tr>
+      <td>俄語（１）</td>
+      <td>二下</td>
+      <td>2</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>租稅各論</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>92</td>
+    </tr>
+    <tr>
+      <td>資源經濟學</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>初級日文(二)</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>金融市場（一）</td>
+      <td>三下</td>
+      <td>3</td>
+      <td>72</td>
+    </tr>
+    <tr>
+      <td>資源經濟學</td>
+      <td>三下</td>
+      <td>2</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <td>租稅各論</td>
+      <td>三下</td>
+      <td>2</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <td>商用英文</td>
+      <td>四上</td>
+      <td>2</td>
+      <td>87</td>
+    </tr>
+    <tr>
+      <td>日語（２）</td>
+      <td>四上</td>
+      <td>2</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>財務管理</td>
+      <td>四上</td>
+      <td>3</td>
+      <td>86</td>
+    </tr>
+    <tr>
+      <td>經濟成長</td>
+      <td>四上</td>
+      <td>3</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <td>英語精進課程</td>
+      <td>四上</td>
+      <td>0</td>
+      <td>86</td>
+    </tr>
+  </table>
+</div>
+
+</div>
+<div id="通識" class="section level3">
+<h3>通識</h3>
+<object id="prog3" data="svg/progress3.svg" type="image/svg+xml" width="55%" class="relativeProg" style="display: block">
+</object>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div id="grade3" class="fixHei" style="display: none">
+  <table id="grade33">
+    <tr>
+      <th>名稱</th>
+      <th>學期</th>
+      <th>學分</th>
+      <th>成績</th>
+    </tr>
+    <tr>
+      <td>中華民國憲法</td>
+      <td>二上</td>
+      <td>2</td>
+      <td>91</td>
+    </tr>
+    <tr>
+      <td>綠色科技與生活</td>
+      <td>二上</td>
+      <td>2</td>
+      <td>83</td>
+    </tr>
+    <tr>
+      <td>智慧財產權與社會生活</td>
+      <td>二下</td>
+      <td>2</td>
+      <td>89</td>
+    </tr>
+    <tr>
+      <td>華人文化與社會</td>
+      <td>二下</td>
+      <td>2</td>
+      <td>71</td>
+    </tr>
+    <tr>
+      <td>明清話本小說</td>
+      <td>三上</td>
+      <td>2</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>藥物安全教育</td>
+      <td>三下</td>
+      <td>2</td>
+      <td>90</td>
+    </tr>
+  </table>
+</div>
+
 </div>
 </div>
 
@@ -2739,6 +3256,9 @@ $(document).ready(function () {
     var grade=sb.getElementById('forGrade')
 
     var mainCh=document.getElementById('mainChart')
+    var g1=document.getElementById('grade1')
+    var g2=document.getElementById('grade2')
+    var g3=document.getElementById('grade3')
 
     var progAll=document.getElementById('progAll')
     var prog1=document.getElementById('prog1')
@@ -2747,6 +3267,10 @@ $(document).ready(function () {
 
     function showProgress(){
       mainCh.setAttribute("style", "display: none"); 
+      g1.setAttribute("style", "display: none"); 
+      g2.setAttribute("style", "display: none"); 
+      g3.setAttribute("style", "display: none"); 
+      
       progAll.setAttribute("style", "display: block"); 
       prog1.setAttribute("style", "display: block"); 
       prog2.setAttribute("style", "display: block"); 
@@ -2758,7 +3282,11 @@ $(document).ready(function () {
       prog1.setAttribute("style", "display: none"); 
       prog2.setAttribute("style", "display: none"); 
       prog3.setAttribute("style", "display: none"); 
-      mainCh.setAttribute("style", "display: block")
+    
+      mainCh.setAttribute("style", "display: block"); 
+      g1.setAttribute("style", "display: block"); 
+      g2.setAttribute("style", "display: block"); 
+      g3.setAttribute("style", "display: block"); 
     }
 
     credit.addEventListener("click",showProgress)
